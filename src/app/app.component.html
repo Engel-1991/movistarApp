@@ -1,0 +1,57 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+  <!-- Contenido del menú de navegación -->
+ 
+
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    
+    <header class="tipoletra">
+      <img src="https://logoeps.com/wp-content/uploads/2013/03/movistar-eps-vector-logo.png">
+    </header>
+    <br>
+    <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
+    <button class="tipoboton"  mat-raised-button (click)="showMenu = !showMenu"><strong>Menu</strong></button>
+    <mat-nav-list *ngIf="showMenu">
+      <app-menu></app-menu>
+    </mat-nav-list> 
+  </mat-drawer>
+
+  <mat-toolbar *ngIf="showSection" class="toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <span>App Movistar</span>
+    <span class="example-spacer"></span>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+    <a routerLinkActive="active" routerLink="/login" class="nav-link dropdown-toggle" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button mat-icon-button >
+        <mat-icon class="login-icon">login</mat-icon>
+      </button>
+
+
+     
+  </a>
+ 
+  </mat-toolbar>
+<router-outlet></router-outlet>
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+      <div class="copyright text-center my-auto">
+          <span class="span">Copyright © Engels Corps. Website 2023</span>
+      </div>
+  </div>
+</footer>

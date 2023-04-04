@@ -1,0 +1,37 @@
+<input class="input" placeholder="Buscar Nombre" (input)="FiltrarNombre($event)">
+<label for="my-file-input" class="custom-file-upload">
+	<i class="fa fa-cloud-upload"></i> Subir Archivo
+  </label>
+<input id="my-file-input" type="file" (change)="onFileChange($event)" multiple="false" />
+<button class="custom-file-upload"(click)="GenerarListaReproducciones()">Generar Lista Reproduccion</button>
+<button class="custom-file-upload" (click)="toggleTable()">{{ isTableExpanded ? 'Ocultar Tabla' : 'Ver Tabla' }} </button>
+<button class="custom-file-upload"(click)="export()">Descargar</button>
+
+	<div *ngIf="data.length > 0">
+		<div style="display: block; overflow: auto;">
+			<table *ngIf="isTableExpanded">
+				<tbody>
+					<tr *ngFor="let row of dataFilter">
+					  <td *ngFor="let val of row">{{val}}</td>
+					</tr>
+				  </tbody>
+			  </table>
+		  </div>  
+	  </div>
+	  
+
+	  <app-skills></app-skills>
+
+		
+
+	  
+
+
+
+	  
+   
+
+
+
+
+  

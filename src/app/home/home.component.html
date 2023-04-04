@@ -1,0 +1,69 @@
+
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Buscar</mat-label>
+        <input type="text" matInput #message maxlength="10" placeholder="Ej. 3232134170..." />
+        <mat-hint align="start"
+          ><strong>Ingrese Numero de Celular</strong>
+        </mat-hint>
+        <mat-hint align="end"
+          >{{ message.value.length }} / 10</mat-hint>   
+      </mat-form-field>
+      <button class="tamanoboton" (click)="sendData(message.value)"><strong>Enviar</strong> </button>
+    </form>
+  
+    <br />
+    <br />
+
+
+    <app-skills></app-skills>
+
+  
+    <!-- <ul>
+      <li *ngFor="let user of userList">Name: {{ user.LineaCelular }}</li>
+    </ul> -->
+  
+    <!-- <mat-accordion *ngFor="let inventario of inventarios">
+      <div class="mat-mdc-card">
+        <mat-expansion-panel
+          [expanded]="panelOpenState"
+          (opened)="panelOpenState = false"
+          (closed)="panelOpenState = false"
+        >
+        
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+            <pre><strong>Nombre Serie:</strong> {{ inventario.lstInventarioView[0].NombreSerie }}
+            </pre></mat-panel-title>
+            <mat-panel-description>
+            <pre><strong>        Linea Celular:</strong>   {{ inventario.lstInventarioView[0].LineaCelular }}
+            </pre></mat-panel-description>
+          </mat-expansion-panel-header>
+          <br />
+         
+          <mat-card
+            *ngFor="let InventarioView of inventario.lstInventarioView"
+            class="bacbackground-white">
+          
+            <pre><strong>Fecha:                         </strong> {{ InventarioView.FechaInicial }}</pre>
+            <pre><strong>D.Identidad:               </strong> {{ InventarioView.NitCedula }}</pre>
+            <div  #audioPlayer id="audioPlayer"> 
+            <mat-icon  (click)="ObtenerGrabacion(InventarioView, audioPlayer)"> play_arrow </mat-icon> </div>
+          </mat-card>
+         
+        </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+    <br /> -->
+  
+    <!-- 3016676314 -->
+    <!-- 3022930255 -->
+    
+
+
+
+
+
+
+  

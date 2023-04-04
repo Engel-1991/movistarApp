@@ -1,0 +1,71 @@
+input[type="file"] {
+    position: absolute;
+    left: -9999px;
+  }
+.custom-file-upload {
+    display: inline-block;
+    padding: 9px 12px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #519bdb;
+    border-color: #042c50;
+    border-radius: 6px;
+    margin: 25px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 4px rgb(92, 92, 92);
+    
+}
+.custom-file-upload:active {
+    background-color: rgb(32, 0, 121);
+    box-shadow: 0 0 15px rgba(32, 0, 121);
+   
+
+  }
+  * {
+    font-family: 'Lato', sans-serif;
+  }
+  table {
+    width: 100%;
+    min-width: 800px;
+    margin: 15px 20px 15px 20px;
+  }
+  td,
+  th {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .pagination {
+    list-style: none;
+  }
+  .pagination li {
+    display: inline;
+  }
+  .input{
+  
+      font-size: 1.2rem;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
+      padding: 0 10px;
+      font-family: auto;
+      margin: 35px;
+      box-sizing: border-box;
+      box-shadow: 3px 3px 4px rgb(92, 92, 92);
+    
+  }
+  .input:focus {
+    border: 2px solid #37adff;
+    box-shadow: 0 0 5px #37adff;
+    transition: border .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  .input:valid {
+    border-color: #42b72a;
+  }
+  input:invalid {
+    border-color: #d10000;
+  }
+  
+  
+  
+  

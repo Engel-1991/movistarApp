@@ -1,0 +1,32 @@
+<mat-accordion *ngFor="let inventario of inventarios">
+  <div class="mat-mdc-card">
+    <mat-expansion-panel
+      [expanded]="panelOpenState"
+      (opened)="panelOpenState = false"
+      (closed)="panelOpenState = false"
+    >
+    
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+        <pre><strong>Nombre Serie:</strong> {{ inventario.lstInventarioView[0].NombreSerie }}
+        </pre></mat-panel-title>
+        <mat-panel-description>
+        <pre><strong>        Linea Celular:</strong>   {{ inventario.lstInventarioView[0].LineaCelular }}
+        </pre></mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+     
+      <mat-card
+        *ngFor="let InventarioView of inventario.lstInventarioView"
+        class="bacbackground-white">
+      
+        <pre><strong>Fecha:                         </strong> {{ InventarioView.FechaInicial }}</pre>
+        <pre><strong>D.Identidad:               </strong> {{ InventarioView.NitCedula }}</pre>
+        <div  #audioPlayer id="audioPlayer"> 
+        <mat-icon  (click)="ObtenerGrabacion(InventarioView, audioPlayer)"> play_arrow </mat-icon> </div>
+      </mat-card>
+     
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>
+<br />

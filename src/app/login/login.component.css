@@ -1,0 +1,42 @@
+
+body {
+  background-image: url('../assets/images/11.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 625px;
+}
+img {
+
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 50%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.centrar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.texto {
+  padding: 4px;
+}
+
+.button {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

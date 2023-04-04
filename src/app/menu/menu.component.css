@@ -1,0 +1,10 @@
+.mdc-list-item {
+text-align: center;
+}
+
+a {
+    font-size: larger;
+    font-family: auto;
+    text-decoration: none;
+    color: #000;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { DataService } from '../services/user.service';
 
@@ -17,11 +18,12 @@ export class LoginComponent implements OnInit {
     Validators.email,
   ]);
 
-  constructor(private router: Router, private dataService: DataService) {}
+  constructor(private router: Router, private dataService: DataService, private _snackBar: MatSnackBar) {}
   
   ngOnInit() {}
 
   submitToken() {
+    localStorage.setItem('token', this.token);
     var inventario = [
       {
         Serie: '',
@@ -66,11 +68,12 @@ export class LoginComponent implements OnInit {
 
     this.dataService.sendData(data.userList[0]).subscribe(
       (response) => {
-        localStorage.setItem('token', this.token);
         this.router.navigate(['home']);
       },
       (error) => {
-        alert('No fue posible iniciar sesión');
+        this._snackBar.open('No fue posible iniciar sesión', '', {
+          duration: 3000,
+        });
         console.error(error);
       }
     );
